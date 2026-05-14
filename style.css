@@ -4,7 +4,9 @@
    ============================================= */
 
 /* ---------- RESET & ROOT VARIABLES ---------- */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -68,7 +70,9 @@ body {
   overflow-x: auto;
 }
 
-.nav::-webkit-scrollbar { height: 0; }
+.nav::-webkit-scrollbar {
+  height: 0;
+}
 
 .nav-list {
   display: flex;
@@ -93,14 +97,19 @@ body {
   white-space: nowrap;
 }
 
-.nav-btn:hover { color: var(--text); }
+.nav-btn:hover {
+  color: var(--text);
+}
+
 .nav-btn.active {
   color: var(--gold);
   border-bottom-color: var(--gold);
 }
 
 /* ---------- MAIN CONTENT ---------- */
-.main { padding: 2.5rem 2rem; }
+.main {
+  padding: 2.5rem 2rem;
+}
 
 /* SCROLL LAYOUT — all pages always visible, stacked */
 .page {
@@ -116,7 +125,9 @@ body {
 }
 
 /* Legacy active class kept for JS compatibility */
-.page.active { display: block; }
+.page.active {
+  display: block;
+}
 
 /* ---------- PAGE HEADERS ---------- */
 .page-title {
@@ -127,7 +138,9 @@ body {
   margin-bottom: 0.4rem;
 }
 
-.page-title span { color: var(--gold); }
+.page-title span {
+  color: var(--gold);
+}
 
 .page-divider {
   width: 48px;
@@ -164,7 +177,9 @@ body {
 .profile-hero::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 2px;
   background: linear-gradient(90deg, transparent, var(--gold), transparent);
 }
@@ -194,9 +209,17 @@ body {
 }
 
 @keyframes rotatering {
-  0%   { filter: brightness(1); }
-  50%  { filter: brightness(1.2); }
-  100% { filter: brightness(1); }
+  0% {
+    filter: brightness(1);
+  }
+
+  50% {
+    filter: brightness(1.2);
+  }
+
+  100% {
+    filter: brightness(1);
+  }
 }
 
 .avatar-photo {
@@ -322,12 +345,14 @@ body {
 }
 
 .contact-text p {
-  font-size: 0.68rem;
-  color: var(--text-dim);
+  font-size: 0.60rem;
+  color: #ffffff;
   font-family: var(--font-mono);
   letter-spacing: 1px;
   text-transform: uppercase;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
+  font-weight: 600;
+  opacity: 0.95;
 }
 
 .contact-text a,
@@ -340,6 +365,15 @@ body {
 
 .contact-text a:hover {
   color: var(--gold);
+}
+
+.fa-whatsapp {
+  font-size: 36px;
+}
+
+.fa-location-dot {
+  color: red;
+  font-size: 36px;
 }
 
 /* ---------- LOCATION CLICKABLE CARD ---------- */
@@ -383,7 +417,9 @@ body {
   max-width: 680px;
 }
 
-.about-text p + p { margin-top: 1rem; }
+.about-text p+p {
+  margin-top: 1rem;
+}
 
 .what-doing-grid {
   display: grid;
@@ -405,7 +441,9 @@ body {
 .service-card::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 2px;
   background: linear-gradient(90deg, var(--gold), transparent);
   opacity: 0;
@@ -417,7 +455,9 @@ body {
   transform: translateY(-2px);
 }
 
-.service-card:hover::before { opacity: 1; }
+.service-card:hover::before {
+  opacity: 1;
+}
 
 .service-icon {
   font-size: 1.5rem;
@@ -455,7 +495,9 @@ body {
   transition: border-color 0.2s;
 }
 
-.cert-card:hover { border-color: var(--border-gold); }
+.cert-card:hover {
+  border-color: var(--border-gold);
+}
 
 .cert-badge {
   width: 40px;
@@ -569,7 +611,9 @@ body {
 }
 
 /* ---------- SKILLS ---------- */
-.skills-section { margin-bottom: 2rem; }
+.skills-section {
+  margin-bottom: 2rem;
+}
 
 .skills-grid {
   display: grid;
@@ -632,7 +676,9 @@ body {
 .cv-download-section::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 2px;
   background: linear-gradient(90deg, transparent, var(--gold), transparent);
 }
@@ -651,7 +697,11 @@ body {
   gap: 1rem;
 }
 
-.cv-icon { font-size: 2.2rem; line-height: 1; flex-shrink: 0; }
+.cv-icon {
+  font-size: 2.2rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
 
 .cv-title {
   font-family: var(--font-display);
@@ -667,7 +717,12 @@ body {
   font-family: var(--font-mono);
 }
 
-.cv-actions { display: flex; gap: 0.75rem; flex-shrink: 0; flex-wrap: wrap; }
+.cv-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
 
 .cv-btn {
   display: inline-flex;
@@ -769,7 +824,9 @@ body {
   overflow: hidden;
 }
 
-.project-body { padding: 1.2rem; }
+.project-body {
+  padding: 1.2rem;
+}
 
 .project-tags {
   display: flex;
@@ -835,7 +892,9 @@ body {
   background: var(--bg3);
 }
 
-.blog-body { padding: 1.2rem; }
+.blog-body {
+  padding: 1.2rem;
+}
 
 .blog-meta {
   display: flex;
@@ -962,7 +1021,9 @@ body {
   text-decoration: none;
 }
 
-.cinfo-val a:hover { color: var(--gold); }
+.cinfo-val a:hover {
+  color: var(--gold);
+}
 
 /* ---------- CONTACT FORM ---------- */
 .form-title {
@@ -993,8 +1054,13 @@ body {
   margin-bottom: 12px;
 }
 
-.form-input:focus { border-color: var(--gold); }
-.form-input::placeholder { color: var(--text-dim); }
+.form-input:focus {
+  border-color: var(--gold);
+}
+
+.form-input::placeholder {
+  color: var(--text-dim);
+}
 
 textarea.form-input {
   resize: vertical;
@@ -1018,7 +1084,9 @@ textarea.form-input {
   text-transform: uppercase;
 }
 
-.form-btn:hover { opacity: 0.88; }
+.form-btn:hover {
+  opacity: 0.88;
+}
 
 /* ---------- CUSTOM IMAGE ICONS ---------- */
 .contact-icon-img {
@@ -1037,35 +1105,44 @@ textarea.form-input {
 /* ---------- SOCIAL BRAND ICONS ---------- */
 .social-linkedin {
   background: #0A66C2;
-  border-color: #0A66C2;
-  color: #fff;
-}
-.social-linkedin:hover {
-  background: #004182 !important;
-  border-color: #004182 !important;
-  color: #fff !important;
+  border: 1px solid #0A66C2;
+  color: #ffffff;
 }
 
+.social-linkedin:hover {
+  background: #004182;
+  border-color: #004182;
+  color: #ffffff;
+}
+
+/* GitHub */
 .social-github {
-  background: #24292F;
-  border-color: #444C56;
+  background: #24292f;
+  border: 1px solid #444c56;
   color: #f0f6fc;
 }
+
 .social-github:hover {
-  background: #161B22 !important;
-  border-color: #8b949e !important;
-  color: #fff !important;
+  background: #161b22;
+  border-color: #8b949e;
+  color: #ffffff;
 }
 
-.social-kaggle {
-  background: #20BEFF;
-  border-color: #20BEFF;
-  color: #fff;
+/* Instagram */
+.social-instagram {
+  background: linear-gradient(45deg,
+      #f09433,
+      #e6683c,
+      #dc2743,
+      #cc2366,
+      #bc1888);
+  border: 1px solid transparent;
+  color: #ffffff;
 }
-.social-kaggle:hover {
-  background: #009FD9 !important;
-  border-color: #009FD9 !important;
-  color: #fff !important;
+
+.social-instagram:hover {
+  opacity: 0.9;
+  color: #ffffff;
 }
 
 /* ---------- CONTACT PAGE ICONS ---------- */
@@ -1091,9 +1168,13 @@ textarea.form-input {
    RESPONSIVE — TABLET (max 768px)
    ======================================== */
 @media (max-width: 768px) {
-  .main { padding: 1.8rem 1.2rem; }
+  .main {
+    padding: 1.8rem 1.2rem;
+  }
 
-  .page-title { font-size: 1.6rem; }
+  .page-title {
+    font-size: 1.6rem;
+  }
 
   /* Profile hero stacks vertically on tablet */
   .profile-hero {
@@ -1109,7 +1190,9 @@ textarea.form-input {
     align-items: center;
   }
 
-  .profile-name { font-size: 1.55rem; }
+  .profile-name {
+    font-size: 1.55rem;
+  }
 
   .profile-socials {
     justify-content: center;
@@ -1119,28 +1202,57 @@ textarea.form-input {
     grid-template-columns: 1fr;
   }
 
-  .resume-grid { grid-template-columns: 1fr; }
+  .resume-grid {
+    grid-template-columns: 1fr;
+  }
 
-  .contact-grid { grid-template-columns: 1fr; }
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
 
-  .cv-download-inner { flex-direction: column; align-items: flex-start; }
-  .cv-actions { width: 100%; }
-  .cv-btn { flex: 1; justify-content: center; }
+  .cv-download-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cv-actions {
+    width: 100%;
+  }
+
+  .cv-btn {
+    flex: 1;
+    justify-content: center;
+  }
 }
 
 /* ========================================
    RESPONSIVE — MOBILE (max 480px)
    ======================================== */
 @media (max-width: 480px) {
-  .main { padding: 1.4rem 1rem; }
+  .main {
+    padding: 1.4rem 1rem;
+  }
 
-  .page-title { font-size: 1.4rem; }
+  .page-title {
+    font-size: 1.4rem;
+  }
 
-  .nav { padding: 0 0.8rem; }
-  .nav-btn { padding: 0.85rem 0.75rem; font-size: 0.72rem; }
+  .nav {
+    padding: 0 0.8rem;
+  }
 
-  .profile-hero { padding: 1.4rem 1rem; }
-  .profile-name { font-size: 1.35rem; }
+  .nav-btn {
+    padding: 0.85rem 0.75rem;
+    font-size: 0.72rem;
+  }
+
+  .profile-hero {
+    padding: 1.4rem 1rem;
+  }
+
+  .profile-name {
+    font-size: 1.35rem;
+  }
 
   .avatar-ring {
     width: 100px;
